@@ -42,6 +42,31 @@ body {
 }
 .nav {
     display: flex;
-    max-width: fit-content;
+    justify-content: space-around;
+    max-width: 80%;
     margin: 0 auto;
+}
+.timer__button {
+    width: 180px;
+    height: 45px;
+    border-radius: 8px;
+}
+.button-start,
+.button-pause,
+.button-clear {
+    background-repeat: no-repeat;
+    background-position: -8px center;
+    background-size: 30%;
+}
+.button-start {
+    background-image: url(../img/play.svg);
+}
+.button-pause {
+    background-image: url(../img/pause.svg);
+}
+.button-clear {
+    background-image: url(../img/clear.svg);
+}
+.hidden {
+    display: none;
 }
