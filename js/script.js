@@ -32,7 +32,7 @@ function forStart() {
     start.classList.add('hidden');
     pause.classList.remove('hidden');
     clearInterval(interval);
-    interval = setInterval(startTimer, 1);
+    interval = setInterval(startTimer, 4);
 };
 function forPause() {
     pause.classList.add('hidden');
@@ -43,7 +43,7 @@ function forContinue() {
     continueTimer.classList.add('hidden');
     pause.classList.remove('hidden');
     clearInterval(interval);
-    interval = setInterval(startTimer, 1);
+    interval = setInterval(startTimer, 4);
 };
 function forClear() {
     continueTimer.classList.add('hidden');
