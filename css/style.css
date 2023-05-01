@@ -53,7 +53,8 @@ body {
 }
 .button-start,
 .button-pause,
-.button-clear {
+.button-clear,
+.button-continue {
     background-repeat: no-repeat;
     background-position: -8px center;
     background-size: 30%;
