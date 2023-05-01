@@ -1,0 +1,41 @@
+@media screen and (max-width: 320px) {
+    .title {
+        font-size: 24px;
+    }
+    .clock__watch {
+        font-size: 50px;
+    }
+    .timer__button {
+        width: 100px;
+        min-height: 45px;
+        font-size: 12px;
+    }
+    .button-start,
+    .button-pause,
+    .button-clear,
+    .button-continue {
+        background-size: 60%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 24px;
+    }
+    .timer__button {
+        width: 100px;
+        min-height: 45px;
+        font-size: 12px;
+    }
+    .button-start,
+    .button-pause,
+    .button-clear,
+    .button-continue {
+        background-size: 60%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .clock__watch {
+        font-size: 60px;
+    }
+
+}
