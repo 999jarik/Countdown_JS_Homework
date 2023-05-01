@@ -11,7 +11,7 @@ var millisec = 0;
 var interval;
 
 function startTimer () {
-    millisec++;
+    millisec += 4;
     if (millisec === 1000) {
         sec++;
         millisec = 0;
