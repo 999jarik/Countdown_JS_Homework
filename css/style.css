@@ -41,6 +41,13 @@ body {
     font-size: 128px;
     color: white;
 }
+.millisec {
+    max-width: fit-content;
+    margin: 0 auto;
+    font-size: 28px;
+    color: white;
+
+}
 .nav {
     display: flex;
     justify-content: space-around;
