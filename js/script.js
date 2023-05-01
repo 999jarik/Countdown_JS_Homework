@@ -32,19 +32,19 @@ function forStart() {
     start.classList.add('hidden');
     pause.classList.remove('hidden');
     clearInterval(interval);
-    interval = setInterval(startTimer, 4);
+    interval = setInterval(startTimer, 1);
+};
+function forContinue() {
+    continueTimer.classList.add('hidden');
+    pause.classList.remove('hidden');
+    clearInterval(interval);
+    interval = setInterval(startTimer, 1);
 };
 function forPause() {
     pause.classList.add('hidden');
     continueTimer.classList.remove('hidden');
     clearInterval(interval);
 }
-function forContinue() {
-    continueTimer.classList.add('hidden');
-    pause.classList.remove('hidden');
-    clearInterval(interval);
-    interval = setInterval(startTimer, 4);
-};
 function forClear() {
     continueTimer.classList.add('hidden');
     pause.classList.add('hidden');
