@@ -11,7 +11,7 @@ var millisec = 0;
 var interval;
 
 function startTimer () {
-    millisec++;
+    millisec+=4;
     if (millisec > 999) {
         sec++;
         millisec = 0;
@@ -32,13 +32,13 @@ function forStart() {
     start.classList.add('hidden');
     pause.classList.remove('hidden');
     clearInterval(interval);
-    interval = setInterval(startTimer, 1);
+    interval = setInterval(startTimer, 4);
 };
 function forContinue() {
     continueTimer.classList.add('hidden');
     pause.classList.remove('hidden');
     clearInterval(interval);
-    interval = setInterval(startTimer, 1);
+    interval = setInterval(startTimer, 4);
 };
 function forPause() {
     pause.classList.add('hidden');
