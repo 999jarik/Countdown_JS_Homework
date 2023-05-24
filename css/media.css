@@ -2,6 +2,9 @@
     .title {
         font-size: 24px;
     }
+    .clock {
+        padding-top: 50px;
+    }
     .clock__watch {
         font-size: 50px;
     }
@@ -22,6 +25,9 @@
     .title {
         font-size: 24px;
     }
+    .clock {
+        padding-top: 50px;
+    }
     .timer__button {
         width: 100px;
         min-height: 45px;
@@ -39,5 +45,9 @@
     .clock__watch {
         font-size: 60px;
     }
-
+    .clock {
+        padding-top: 50px;
+        margin: 0 auto;
+    }
+    
 }
