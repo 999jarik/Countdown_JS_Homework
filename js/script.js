@@ -11,8 +11,8 @@ var millisec = 0;
 var interval;
 
 function startTimer () {
-    millisec+=4;
-    if (millisec > 999) {
+    millisec = millisec + 1;
+    if (millisec > 99) {
         sec++;
         millisec = 0;
     }
@@ -25,20 +25,20 @@ function startTimer () {
         min = 0;
     }
     timer.innerHTML = `${hour<10?"0"+hour:hour}:${min<10?"0"+min:min}:${sec<10?"0"+sec:sec}`;
-    timerMilli.innerHTML = `${millisec < 10 ? "00" + millisec : millisec < 100 ? "0" + millisec : millisec}`;
+    timerMilli.innerHTML = `${millisec < 10 ? "0" + millisec : millisec < 100 ? "" + millisec : millisec}`;
 };
 
 function forStart() {
     start.classList.add('hidden');
     pause.classList.remove('hidden');
     clearInterval(interval);
-    interval = setInterval(startTimer, 4);
+    interval = setInterval(startTimer, 10);
 };
 function forContinue() {
     continueTimer.classList.add('hidden');
     pause.classList.remove('hidden');
     clearInterval(interval);
-    interval = setInterval(startTimer, 4);
+    interval = setInterval(startTimer, 10);
 };
 function forPause() {
     pause.classList.add('hidden');
