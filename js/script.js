@@ -1,5 +1,6 @@
 var start = document.querySelector('.nav__button-start');
 var pause = document.querySelector('.nav__button-pause');
+var interval = document.querySelector('.button-interval')
 var continueTimer = document.querySelector('.nav__button-continue');
 var clear = document.querySelector('.nav__button-clear');
 var timer = document.querySelector('.clock__watch');
@@ -8,7 +9,9 @@ var hour = 0;
 var min = 0;
 var sec = 0;
 var millisec = 0;
-var interval;
+var areaInt = document.querySelector('.intervals__area');
+var listIntervals = document.querySelector('.intervals__list');
+var li;
 
 function startTimer () {
     millisec = millisec + 1;
@@ -25,7 +28,15 @@ function startTimer () {
         min = 0;
     }
     timer.innerHTML = `${hour<10?"0"+hour:hour}:${min<10?"0"+min:min}:${sec<10?"0"+sec:sec}`;
-    timerMilli.innerHTML = `${millisec < 10 ? "0" + millisec : millisec < 100 ? "" + millisec : millisec}`;
+    timerMilli.innerHTML = `${millisec < 10 ? "0" + millisec : millisec}`;
+};
+
+function writeInterval () {
+    li = document.createElement('li');
+    li.className = 'list-item';
+    li.textContent = timer.innerHTML + '   :' + timerMilli.innerHTML + ' ms';
+    listIntervals.appendChild(li)
+    return;
 };
 
 function forStart() {
@@ -55,10 +66,15 @@ function forClear() {
     sec = 0;
     millisec = 0;
     timer.innerHTML = `${hour<10?"0"+hour:hour}:${min<10?"0"+min:min}:${sec<10?"0"+sec:sec}`;
-    timerMilli.innerHTML = `${millisec < 10 ? "00" + millisec : millisec < 100 ? "0" + millisec : millisec}`;
+    timerMilli.innerHTML = `${millisec < 10 ? "0" + millisec : millisec}`;
+    listIntervals.remove();
+    listIntervals = document.createElement('ul');
+    listIntervals.className = 'intervals__list';
+    areaInt.appendChild(listIntervals);
 };
 
 start.addEventListener('click', forStart);
 pause.addEventListener('click', forPause);
+interval.addEventListener('click', writeInterval);
 continueTimer.addEventListener('click', forContinue);
 clear.addEventListener('click', forClear);
