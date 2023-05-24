@@ -13,7 +13,8 @@
     .button-start,
     .button-pause,
     .button-clear,
-    .button-continue {
+    .button-continue,
+    .button-interval {
         background-size: 60%;
     }
 }
@@ -29,7 +30,8 @@
     .button-start,
     .button-pause,
     .button-clear,
-    .button-continue {
+    .button-continue,
+    .button-interval {
         background-size: 60%;
     }
 }
