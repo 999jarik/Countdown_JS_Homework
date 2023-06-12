@@ -1,16 +1,21 @@
-var start = document.querySelector('.nav__button-start');
-var pause = document.querySelector('.nav__button-pause');
-var interval = document.querySelector('.button-interval')
-var continueTimer = document.querySelector('.nav__button-continue');
-var clear = document.querySelector('.nav__button-clear');
-var timer = document.querySelector('.clock__watch');
-var timerMilli = document.querySelector('.millisec');
+var choice = function(selector) {
+    return document.querySelector(selector)
+};
+
+var title = choice('.title')
+var start = choice('.nav__button-start');
+var pause = choice('.nav__button-pause');
+var interval = choice('.button-interval')
+var continueTimer = choice('.nav__button-continue');
+var clear = choice('.nav__button-clear');
+var timer = choice('.clock__watch');
+var timerMilli = choice('.millisec');
 var hour = 0;
 var min = 0;
 var sec = 0;
 var millisec = 0;
-var areaInt = document.querySelector('.intervals__area');
-var listIntervals = document.querySelector('.intervals__list');
+var areaInt = choice('.intervals__area');
+var listIntervals = choice('.intervals__list');
 var li;
 
 function startTimer () {
@@ -40,23 +45,27 @@ function writeInterval () {
 };
 
 function forStart() {
+    title.classList.add('neon');
     start.classList.add('hidden');
     pause.classList.remove('hidden');
     clearInterval(interval);
     interval = setInterval(startTimer, 10);
 };
 function forContinue() {
+    title.classList.add('neon');
     continueTimer.classList.add('hidden');
     pause.classList.remove('hidden');
     clearInterval(interval);
     interval = setInterval(startTimer, 10);
 };
 function forPause() {
+    title.classList.remove('neon');
     pause.classList.add('hidden');
     continueTimer.classList.remove('hidden');
     clearInterval(interval);
 }
 function forClear() {
+    title.classList.remove('neon');
     continueTimer.classList.add('hidden');
     pause.classList.add('hidden');
     start.classList.remove('hidden');

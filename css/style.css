@@ -35,7 +35,7 @@ body {
 .clock {
     max-width: fit-content;
     margin: 0 auto 50px;
-    padding: 200px 0 25px 0;
+    padding: 160px 0 25px 0;
 }
 .clock__watch {
     font-size: 128px;
@@ -129,6 +129,37 @@ body {
 .button-clear {
     background-color: rgba(224, 14, 14, 0.8);
     background-image: url(../img/clear.svg);
+}
+.footer {
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 25px 0;
+    color: #5e5e5ed7;
+}
+.social {
+    color: #6a839bd7;
+}
+.social:hover {
+    color: #d1cdcdd7;
+    text-shadow: 0 0 5px #fff,
+     0 0 10px #fff,
+     0 0 15px #fff,
+     0 0 20px #3FF,
+     0 0 30px #3FF,
+     0 0 40px #3FF,
+     0 0 50px #3FF,
+     0 0 75px #3FF;
+}
+.neon {
+    color: #f5f5f5;
+    text-shadow: 0 0 5px #fff,
+     0 0 10px #fff,
+     0 0 15px #fff,
+     0 0 20px #3FF,
+     0 0 30px #3FF,
+     0 0 40px #3FF,
+     0 0 50px #3FF,
+     0 0 75px #3FF;
 }
 .hidden {
     display: none;
